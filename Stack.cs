@@ -30,7 +30,7 @@ namespace stack
         }
         public int Pop()
         {
-            if (Top == -1)
+            if (IsEmpty())
             {
                 Console.WriteLine("stack is empty");
                 return -1;
@@ -40,11 +40,15 @@ namespace stack
 
         public int peak()
         {
-            if (Top == -1)
+            if (IsEmpty())
             {
                 Console.WriteLine("stack is empty");
             }
             return stack[Top];
+        }
+        private bool IsEmpty()
+        {
+            return Top == -1;
         }
     }
 }
