@@ -19,7 +19,7 @@ namespace stack
 
         public void Push(int number)
         {
-            if(Top >= stack.Length-1)
+            if(IsFull())
             {
                 Console.WriteLine("The stack is full");
                 return;//to avoid ex
@@ -49,6 +49,10 @@ namespace stack
         private bool IsEmpty()
         {
             return Top == -1;
+        }
+        private bool IsFull()
+        {
+            return Top >= stack.Length - 1;
         }
     }
 }
